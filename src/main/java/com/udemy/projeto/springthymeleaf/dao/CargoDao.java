@@ -3,6 +3,7 @@ package com.udemy.projeto.springthymeleaf.dao;
 import java.util.List;
 
 import com.udemy.projeto.springthymeleaf.entities.Cargo;
+import com.udemy.projeto.springthymeleaf.util.PaginacaoUtil;
 
 public interface CargoDao {
 
@@ -15,4 +16,6 @@ public interface CargoDao {
     Cargo findById(Long id);
 
     List<Cargo> findAll();
+
+    PaginacaoUtil<Cargo> buscaPaginada(int pagina);
 }

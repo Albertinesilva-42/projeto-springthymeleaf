@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.udemy.projeto.springthymeleaf.dao.CargoDao;
 import com.udemy.projeto.springthymeleaf.entities.Cargo;
+import com.udemy.projeto.springthymeleaf.util.PaginacaoUtil;
 
 @Service
 @Transactional(readOnly = false)
@@ -49,6 +50,11 @@ public class CargoServiceImpl implements CargoService {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public PaginacaoUtil<Cargo> buscaPorPaginada(int pagina) {
+        return dao.buscaPaginada(pagina);
     }
 
 }

@@ -3,6 +3,7 @@ package com.udemy.projeto.springthymeleaf.service;
 import java.util.List;
 
 import com.udemy.projeto.springthymeleaf.entities.Cargo;
+import com.udemy.projeto.springthymeleaf.util.PaginacaoUtil;
 
 public interface CargoService {
     
@@ -17,5 +18,7 @@ public interface CargoService {
     List<Cargo>buscarTodos();
 
     boolean cargoTemFuncionarios(Long id);
+
+    PaginacaoUtil<Cargo> buscaPorPaginada(int pagina);
 
 }
