@@ -19,6 +19,7 @@ public class CargoServiceImpl implements CargoService {
 
     @Override
     public void salvar(Cargo cargo) {
+        cargo.setNome(cargo.getNome().toUpperCase());
         dao.save(cargo);
     }
 
